@@ -1,0 +1,195 @@
+.footer {
+  background: #f7941d;
+  color: #fff;
+  margin-top: 40px;
+}
+
+/* Grid layout */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  padding: 40px 20px;
+}
+
+/* Column headings */
+.footer-col h4 {
+  font-size: 18px;
+  margin-bottom: 14px;
+  font-weight: 700;
+  border-left: 3px solid #fff;
+  padding-left: 8px;
+}
+
+/* Paragraphs */
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #f5f5f5;
+}
+
+/* Links list */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-col ul li { margin-bottom: 8px; }
+.footer-col ul li a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-col ul li a:hover { color: #222; }
+
+/* Social icons */
+.footer-socials a {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #fff;
+  transition: color 0.3s;
+}
+.footer-socials a:hover { color: #222; }
+
+/* Upcoming pujas */
+.puja-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.puja-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+.puja-item span {
+  font-size: 14px;
+  color: #fff;
+}
+.puja-item small {
+  display: block;
+  font-size: 12px;
+  color: #222;
+  margin-top: 2px;
+}
+
+/* Calendar icon before "Every Tuesday/Monday" */
+.cal-icon {
+  font-size: 12px;
+  margin-right: 6px;
+  vertical-align: -1px;
+}
+
+/* Subscribe */
+.subscribe-form {
+  display: flex;
+  margin-top: 10px;
+}
+.subscribe-form input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+.subscribe-form button {
+  padding: 8px 12px;
+  border: none;
+  background: #b71c1c;
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+.subscribe-form button:hover { background: #8b0000; }
+
+/* Bottom bar */
+.footer-bottom {
+  background: #111;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 14px;
+  color: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 920px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}
+
+
+
+
+/* ===== Footer – Mobile tweaks (append) ===== */
+
+/* Tablets / big phones */
+@media (max-width: 920px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 28px 16px;            /* balanced side gutters */
+    box-sizing: border-box;
+  }
+
+  .footer-col h4 { font-size: 17px; margin-bottom: 12px; }
+  .footer-col p  { font-size: 14px; line-height: 1.55; }
+
+  /* Subscribe: keep inline but tighter */
+  .subscribe-form input { padding: 10px; }
+  .subscribe-form button { padding: 10px 12px; }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;     /* stack cols */
+    gap: 18px;
+    padding: 24px 14px;
+  }
+
+  .footer-col h4 { font-size: 16px; }
+  .footer-col p  { font-size: 13.5px; }
+
+  /* Social icons: bigger tap targets, centered on mobile */
+  .footer-socials {
+    display: flex;
+    gap: 14px;
+    margin-top: 8px;
+  }
+  .footer-socials a {
+    font-size: 22px;
+    display: inline-flex;
+    width: 40px; height: 40px;             /* comfy tap area */
+    align-items: center; justify-content: center;
+  }
+
+  /* Upcoming pujas: compact */
+  .puja-item img { width: 52px; height: 52px; margin-right: 8px; }
+  .puja-item span { font-size: 13.5px; }
+  .puja-item small { font-size: 12px; }
+
+  /* Subscribe: stack vertically to avoid overflow */
+  .subscribe-form {
+    flex-direction: column;
+    gap: 10px;
+    max-width: 520px;
+  }
+  .subscribe-form input,
+  .subscribe-form button {
+    width: 100%;
+    border-radius: 8px;                    /* independent rounding */
+  }
+  .subscribe-form button { padding: 12px 14px; font-weight: 700; }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .footer-grid { padding: 22px 12px; }
+  .puja-item img { width: 48px; height: 48px; }
+  .footer-bottom { padding: 10px 8px; font-size: 13px; }
+}

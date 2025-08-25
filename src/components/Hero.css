@@ -1,0 +1,111 @@
+.hero-split {
+  min-height: 70vh;
+  background: url("/images/pooja1.webp") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1));
+  display: flex;
+  align-items: center;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  width: 100%;
+  padding: 40px 20px;
+  color: #fff;
+}
+
+.hero-text h1 {
+  font-size: clamp(28px, 4vw, 46px);
+  margin-bottom: 14px;
+}
+
+/* ✅ Slide-in from left effect */
+.slide-left {
+  text-align: left;
+  transform: translateX(-100%);   /* start outside left */
+  animation: slideInLeft 1.5s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hero-text p {
+  margin-bottom: 18px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.hero-form-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  color: #222;
+  max-width: 380px;
+  width: 80%;
+  height: 100%;
+}
+
+.hero-form-card h3 {
+  margin-bottom: 14px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #b23b00;
+}
+
+.hero-form-card form {
+  display: grid;
+  gap: 12px;
+}
+
+.input {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: #e65100;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #cc4700;
+}
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-form-card {
+    margin: 0 auto;
+  }
+}
