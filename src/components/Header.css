@@ -79,6 +79,9 @@
   border: none;
   padding: 8px;
   z-index: 100;
+    margin-left: auto;
+    order: 3;
+ 
 }
 
 .hamburger span {
@@ -104,7 +107,8 @@
    MOBILE MENU
    ========================= */
 @media (max-width: 900px) {
-  .hamburger { display: flex; }
+  .hamburger { display: flex; 
+    margin-left: auto;}
 
   .nav {
     position: absolute;
@@ -118,6 +122,7 @@
     padding: 20px 0;
     border-top: 1px solid #eee;
     transform: translateY(-120%);
+
   }
 
   .nav.open {

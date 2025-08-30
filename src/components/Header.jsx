@@ -19,6 +19,7 @@ export default function Header() {
         <button
           className={`hamburger ${menuOpen ? "active" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
+           style={{ marginLeft: "90px" }}  
         >
           <span></span>
           <span></span>
